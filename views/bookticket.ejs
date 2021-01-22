@@ -1,0 +1,85 @@
+<html>
+<head>
+    <center>
+<script LANGUAGE="JavaScript" type="text/javascript">
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "<l><li><b>NAME: </b>" + document.form1.fname.value+document.form1.lname.value;
+  message += "<li><b>PHONE: </b>" + document.form1.phone.value;
+  message += "<li><b>EMAIL ID: </b>" + document.form1.eid.value;
+  message += "<li><b>NO OF SEATS: </b>" + document.form1.nos.value;
+  message += "<li><b>FROM: </b>" + document.form1.from.value;
+  message += "<li><b>TO: </b>" + document.form1.to.value;
+    message += "<li><b>DATE OF TRAVEL: </b>" + document.form1.dateoftravel.value;
+  message += "<li><b>PAYMENT METHOD: </b>" + document.form1.payment.value+"</l>";
+  DispWin.document.write(message);
+}
+</script>
+        </center>
+</head>
+<body background="/img/img.jpg">
+		<font color="white" size=5>
+            <center>
+<h1>Ticket Booking</h1>
+</center>
+<form name="form1">
+
+<p style="color:white"><b>First Name:</b> &nbsp; <input TYPE="TEXT" SIZE="50" NAME="fname" required>
+</p>   
+<p style="color:white"><b>Last Name:</b> &nbsp; <input TYPE="TEXT" SIZE="30" NAME="lname" required>
+</p>
+<p style="color:white"><b>Phone: </b> &nbsp; <input TYPE="string" SIZE="15" NAME="phone" required>
+</p>
+<p style="color:white"><b>emailid: </b> <input TYPE="emailid" SIZE="15" NAME="eid" required>
+</p>
+<p style="color:white"><b>No of seats: </b> <input TYPE="number" SIZE="15" NAME="nos" required>
+</p>
+    <p style="color:white"> 
+<b>From:</b>
+<select name="from" required>
+  <option value="BANGLORE">BANGLORE</option>
+  <option value="CHENNAI">CHENNAI</option>
+  <option value="HYDERABAD">HYDERABAD</option>
+  <option value="KOLKATA">KOLKATA</option>
+      <option value="MUMBAI">MUMBAI</option>
+      <option value="DELHI">DELHI</option>
+    <option value="VISHAKAPATANAM">VISHAKAPATNAM</option>
+</select>
+    </p>
+    <p style="color:white">
+    <b> Departure To:</b>
+<select name="to" required>
+  <option value="CHENNAI">CHENNAI</option>
+  <option value="BANGLORE">BANGLORE</option>
+  <option value="HYDERABAD">HYDERABAD</option>
+  <option value="KOLKATA">KOLKATA</option>
+      <option value="MUMBAI">MUMBAI</option>
+      <option value="DELHI">DELHI</option>
+    
+ </select>
+ <p><label for="date1">DATE</label>
+  <input type="date" id="date1" name="dateoftravel" required></p>
+    </p>
+ <p style="color:white">   <b>payment:</b>
+    <select name="payment" required>
+  <option value="UPI">UPI</option>
+  <option value="NET BANKING">NET BANKING</option>
+  <option value="CASH">CASH</option>
+  <option value="CARD">CARD</option>
+    </select>
+    </p>
+
+
+<p style="color:white"><input TYPE="BUTTON" VALUE="BOOK" onClick="display();"></p>
+    
+</form>
+    </font>   
+</body>
+</html>
+
+
+
+
+
+
+

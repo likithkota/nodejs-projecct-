@@ -1,0 +1,70 @@
+<html>
+<head>
+    <center>
+<script LANGUAGE="JavaScript" type="text/javascript">
+function booking() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "<li><b>NAME: </b>" + document.form1.fname1.value+" "+document.form1.lname1.value;
+  message += "<li><b>PHONE: </b>" + document.form1.phone1.value;
+  message += "<li><b>EMAIL ID: </b>" + document.form1.eid1.value;
+  message += "<li><b>NO OF SEATS: </b>" + document.form1.nos1.value;
+  
+  message += "<li><b>PACK: </b>" + document.form1.PACK.value;
+  message += "<li><b>DATE OF TRAVEL: </b>" + document.form1.dateoft.value;
+  message += "<li><b>PAYMENT METHOD: </b>" + document.form1.payment1.value+"<br>";
+  DispWin.document.write(message);
+}
+</script>
+        </center>
+</head>
+<body background="/img/img.jpg">
+		<font color="white" size=5>
+            <center>
+<h1>Ticket Booking</h1>
+</center>
+<form name="form1">
+
+<p style="color:white"><b>First Name:</b> &nbsp; <input TYPE="TEXT" SIZE="50" NAME="fname1" required>
+</p>   
+<p style="color:white"><b>Last Name:</b> &nbsp; <input TYPE="TEXT" SIZE="30" NAME="lname1" required>
+</p>
+<p style="color:white;"><b>Phone: </b> &nbsp; <input TYPE="string" SIZE="15" NAME="phone1" required>
+</p>
+<p style="color:white"><b>emailid: </b> <input TYPE="emailid" SIZE="15" NAME="eid1" required>
+</p>
+<p style="color:white"><b>No of seats: </b> <input TYPE="number" SIZE="15" NAME="nos1" required>
+</p>
+
+<p><label for="date">DATE</label>
+<input type="date" id="date" name="dateoft" required></p>
+
+    <p style="color:white">
+    <b> PACKAGES:</b>
+<select name="PACK" required>
+  <option value="MYSORE PACKAGES">MYSORE PACKAGE</option>
+  <option value="HYDERABAD PACKAGES">HYDERABAD PACKAGE</option>
+  <option value="DELHI PACKAGES">DELHI PACKAGES</option>
+ </select>
+    </p>
+    
+ <p style="color:white">   <b>payment:</b>
+    <select name="payment1" required>
+  <option value="UPI">UPI</option>
+  <option value="NET BANKING">NET BANKING</option>
+  <option value="CASH">CASH</option>
+  <option value="CARD">CARD</option>
+    </select>
+    </p>
+
+
+<p style="color:white"><input TYPE="BUTTON" VALUE="BOOK" onClick="booking();"></p>
+    
+</form>
+    </font>   
+</body>
+</html>
+
+
+
+
+
